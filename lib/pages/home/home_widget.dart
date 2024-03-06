@@ -99,12 +99,9 @@ class _HomeWidgetState extends State<HomeWidget> {
                             : FocusScope.of(context).unfocus(),
                         child: Padding(
                           padding: MediaQuery.viewInsetsOf(context),
-                          child: SizedBox(
-                            height: MediaQuery.sizeOf(context).height * 0.5,
-                            child: BsImageWidget(
-                              imageParam: functions
-                                  .base64toFile(FFAppState().fileBase64)!,
-                            ),
+                          child: BsImageWidget(
+                            imageParam: functions
+                                .base64toFile(FFAppState().fileBase64)!,
                           ),
                         ),
                       );
