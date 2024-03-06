@@ -84,7 +84,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                   setState(() {
                     FFAppState().makePhoto = true;
                   });
-                  await Future.delayed(const Duration(milliseconds: 3000));
+                  await Future.delayed(const Duration(milliseconds: 1000));
                   await showModalBottomSheet(
                     isScrollControlled: true,
                     backgroundColor:
@@ -99,9 +99,12 @@ class _HomeWidgetState extends State<HomeWidget> {
                             : FocusScope.of(context).unfocus(),
                         child: Padding(
                           padding: MediaQuery.viewInsetsOf(context),
-                          child: BsImageWidget(
-                            imageParam: functions
-                                .base64toFile(FFAppState().fileBase64)!,
+                          child: SizedBox(
+                            height: 600.0,
+                            child: BsImageWidget(
+                              imageParam: functions
+                                  .base64toFile(FFAppState().fileBase64)!,
+                            ),
                           ),
                         ),
                       );
