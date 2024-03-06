@@ -84,7 +84,7 @@ class _HomeWidgetState extends State<HomeWidget> {
                   setState(() {
                     FFAppState().makePhoto = true;
                   });
-                  await Future.delayed(const Duration(milliseconds: 1000));
+                  await Future.delayed(const Duration(milliseconds: 3000));
                   await showModalBottomSheet(
                     isScrollControlled: true,
                     backgroundColor:
